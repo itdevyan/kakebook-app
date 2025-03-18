@@ -1,12 +1,17 @@
-import { View, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import React from "react";
+import Filter from "./Filter";
+import ListConceptosIngresos, { DataProps } from "./ListConceptosIngresos";
 
-const DataConceptos = () => {
+const DataConceptos = ({ data, tipoConcepto }: DataProps) => {
   return (
     <View>
-      <Text>DataConceptos</Text>
+      <Filter tipoConcepto={tipoConcepto} />
+      <ListConceptosIngresos data={data} tipoConcepto={tipoConcepto} />
     </View>
   );
 };
 
 export default DataConceptos;
+
+const dataConceptosStyles = StyleSheet.create({});

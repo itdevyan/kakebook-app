@@ -13,7 +13,14 @@ const _layout = () => {
       <Stack.Screen
         name="ingresos"
         options={{
-          title: "Nuevo Ingresos",
+          title: "Nuevo ingreso",
+          headerTintColor: "#fff",
+        }}
+      />
+      <Stack.Screen
+        name="gastos"
+        options={{
+          title: "Nuevo gasto",
           headerTintColor: "#fff",
         }}
       />

@@ -36,6 +36,12 @@ const _layout = () => {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="gastos"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

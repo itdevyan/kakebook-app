@@ -1,15 +1,28 @@
 import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import Svg, { G, Polygon } from "react-native-svg";
 import defaultStyles from "@/constants/DefaultStyles";
 import cycleStyles from "@/styles/CycleStyles";
+import { TIPO_CONCEPTO } from "@/constants/TipoConceptoEnum";
 
-const NoDataConceptos = () => {
+interface NoDataConceptosProps {
+  tipoConcepto: TIPO_CONCEPTO;
+}
+
+const NoDataConceptos = ({ tipoConcepto }: NoDataConceptosProps) => {
+  const [tipo, _] = useState(
+    tipoConcepto === TIPO_CONCEPTO.GASTOS ? "gastos" : "ingresos"
+  );
   return (
-    <>
-      <Text style={[defaultStyles.principalTexto, noDataConceptos.informacion]}>
-        Puedes comenzar registrando tus ingresos presionando el botón +. Si no
-        tienes ingresos o quieres ingresarlos después, presiona el botón
+    <View style={noDataConceptosStyles.container}>
+      <Text
+        style={[
+          defaultStyles.principalTexto,
+          noDataConceptosStyles.informacion,
+        ]}
+      >
+        Puedes comenzar registrando tus {tipo} presionando el botón +. Si no
+        tienes {tipo} o quieres ingresarlos después, presiona el botón
         continuar.
       </Text>
       <View style={[defaultStyles.principalFondo, cycleStyles.buttonContainer]}>
@@ -32,13 +45,16 @@ const NoDataConceptos = () => {
           </G>
         </Svg>
       </View>
-    </>
+    </View>
   );
 };
 
 export default NoDataConceptos;
 
-const noDataConceptos = StyleSheet.create({
+const noDataConceptosStyles = StyleSheet.create({
+  container: {
+    paddingTop: 50,
+  },
   informacion: {
     fontSize: 16,
     fontWeight: "300",
