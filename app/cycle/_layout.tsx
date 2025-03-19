@@ -42,6 +42,18 @@ const _layout = () => {
           headerShown: false,
         }}
       />
+      <Stack.Screen
+        name="ahorros"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="ahorrosConfig"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

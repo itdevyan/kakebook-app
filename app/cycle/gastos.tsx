@@ -26,7 +26,7 @@ const gastos = () => {
           </TouchableOpacity>
         </Link>
       </View>
-      <BotonContinuar url="./gastos" />
+      <BotonContinuar url="./ahorros" />
     </View>
   );
 };
