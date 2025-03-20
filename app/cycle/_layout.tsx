@@ -1,6 +1,4 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { KeyboardProvider } from "react-native-keyboard-controller";
 import { Stack } from "expo-router";
 
 const _layout = () => {
@@ -50,6 +48,12 @@ const _layout = () => {
       />
       <Stack.Screen
         name="ahorrosConfig"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="resumen"
         options={{
           headerShown: false,
         }}

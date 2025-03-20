@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Switch,
-  TextInput,
-} from "react-native";
+import { View, Text, StyleSheet, Switch, TextInput } from "react-native";
 import React, { useState } from "react";
 import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 import defaultStyles from "@/constants/DefaultStyles";
@@ -113,7 +106,7 @@ const ahorrosConfig = () => {
             ]}
           />
         </View>
-        <BotonContinuar url={"./ahorrosConfig"} />
+        <BotonContinuar url={"./resumen"} />
       </View>
     </KeyboardAwareScrollView>
   );

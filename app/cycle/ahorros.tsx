@@ -8,8 +8,6 @@ import { Link } from "expo-router";
 const ahorros = () => {
   return (
     <KeyboardAwareScrollView
-      // nestedScrollEnabled={true}
-      // keyboardShouldPersistTaps="handled"
       bottomOffset={50}
       style={[defaultStyles.principalFondo]}
       contentContainerStyle={[defaultStyles.principalFondo]}
@@ -25,17 +23,19 @@ const ahorros = () => {
               <Text
                 style={[defaultStyles.principalTexto, ahorrosStyles.buttonText]}
               >
-                Quiero ahorrar
+                Quiero configurar mi plan de ahorro
               </Text>
             </TouchableOpacity>
           </Link>
-          <TouchableOpacity style={ahorrosStyles.button}>
-            <Text
-              style={[defaultStyles.principalTexto, ahorrosStyles.buttonText]}
-            >
-              No quiero ahorrar por ahora
-            </Text>
-          </TouchableOpacity>
+          <Link href={"./resumen"} asChild>
+            <TouchableOpacity style={ahorrosStyles.button}>
+              <Text
+                style={[defaultStyles.principalTexto, ahorrosStyles.buttonText]}
+              >
+                Continuar y configurar después
+              </Text>
+            </TouchableOpacity>
+          </Link>
         </View>
       </View>
     </KeyboardAwareScrollView>
