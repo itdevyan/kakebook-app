@@ -63,7 +63,7 @@ const resumen = () => {
             ]}
           />
         </View>
-        <BotonContinuar url={"./resumen"} title="Iniciar mes" />
+        <BotonContinuar url={"/(menu)/(tabs)"} title="Iniciar mes" replace />
       </View>
     </KeyboardAwareScrollView>
   );

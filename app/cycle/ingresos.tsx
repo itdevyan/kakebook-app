@@ -1,13 +1,11 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
-import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 import defaultStyles from "@/constants/DefaultStyles";
 import HeaderLogoMini from "@/components/HeaderLogoMini";
 import BotonContinuar from "@/components/BotonContinuar";
 import { Link } from "expo-router";
 import cycleStyles from "@/styles/CycleStyles";
 import DataConceptos from "./components/DataConceptos";
-import { DataProps } from "./components/ListConceptosIngresos";
 import { TIPO_CONCEPTO } from "@/constants/TipoConceptoEnum";
 
 const data = [

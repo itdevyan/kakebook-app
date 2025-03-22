@@ -6,23 +6,21 @@ import { Stack } from "expo-router";
 const _layout = () => {
   return (
     <KeyboardProvider>
-      <SafeAreaView style={{ flex: 1 }}>
-        <Stack
-          screenOptions={{
-            headerShown: false,
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="cycle" />
+        <Stack.Screen name="introduction" />
+        <Stack.Screen name="validation" />
+        <Stack.Screen
+          name="(modal)"
+          options={{
+            presentation: "modal",
           }}
-        >
-          <Stack.Screen name="cycle" />
-          <Stack.Screen name="introduction" />
-          <Stack.Screen name="validation" />
-          <Stack.Screen
-            name="(modal)"
-            options={{
-              presentation: "modal",
-            }}
-          />
-        </Stack>
-      </SafeAreaView>
+        />
+      </Stack>
     </KeyboardProvider>
   );
 };

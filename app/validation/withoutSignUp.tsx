@@ -48,7 +48,8 @@ const withoutSignUp = () => {
           que tenemos para ti.
         </Text>
         <Link
-          href={"./login"}
+          href={"/(menu)/(tabs)"}
+          replace
           style={[
             defaultStyles.principalBorderButton,
             withoutSignUpStyles.button,
