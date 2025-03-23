@@ -1,6 +1,6 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
-import CustomDrawer from "./components/CustomDrawer";
+import CustomDrawer from "@/components/CustomDrawer";
 
 export default function Layout() {
   return (
@@ -75,7 +75,6 @@ export default function Layout() {
             title: "Configuraciones",
           }}
         />
-        {/* TODO: Falta quitar visiblemente la carpeta components del Drawer  */}
       </Drawer>
     </GestureHandlerRootView>
   );
