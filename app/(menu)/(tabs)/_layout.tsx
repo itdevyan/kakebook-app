@@ -30,8 +30,15 @@ const _layout = () => {
       <Tabs.Screen
         name="resumen"
         options={{
+          headerTitle: "",
           title: "Resumen",
-          // headerShown: false,
+          headerTitleStyle: {
+            color: "#fff",
+          },
+
+          headerStyle: {
+            backgroundColor: "#040405",
+          },
           tabBarIcon: ({ color }) => (
             <Ionicons name={"home-outline"} size={28} color={color} />
           ),
